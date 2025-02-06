@@ -1,0 +1,15 @@
+{
+  "name": "dashboardtemplates",
+  "version": "1.0.0",
+  "description": "Design 1",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./public/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^4.0.4"
+  }
+}
