@@ -1,3 +1,79 @@
- @tailwind base;
- @tailwind component;
- @tailwind utilities;
+@import "tailwindcss";
+
+:root {
+    --sidebar-width-lg: 250px;
+}
+
+ body{
+    box-sizing: border-box;
+    min-height: 100dvh;
+    @apply bg-[#f5f5f5] overflow-y-auto;
+}
+
+
+/* side bar */
+.sidebar {
+     @apply border-r-gray-200 border-r overflow-x-hidden overflow-y-auto w-[var(--sidebar-width-lg)] fixed bg-white left-0 min-h-full p-4;
+}
+
+.sidebar .logo {
+    @apply flex border-b border-b-gray-200 pb-4 justify-center flex-col items-center;
+}
+.sidebar .logo img{
+    @apply h-28 w-28 object-contain;
+}
+
+.sidebar .logo span{
+    @apply text-lg;
+}
+
+.sidebar nav{
+    @apply py-4;
+}
+
+.sidebar nav ul {
+    @apply flex flex-col gap-1;
+}
+.sidebar nav ul li{
+    transition: 0.3s;
+    @apply flex cursor-pointer text-slate-700 items-center font-medium gap-1 px-3 py-1 rounded-lg hover:bg-blue-200;
+}
+
+.sidebar nav ul li.active {
+    @apply bg-blue-400 text-white;
+}
+
+.material-icons {
+    @apply p-1 cursor-pointer;
+}
+
+
+
+.content-area{
+    @apply h-full w-[calc(100vw-var(--sidebar-width-lg))] fixed right-0;
+}
+
+.content-area header{
+    @apply shadow fixed w-[calc(100vw-var(--sidebar-width-lg))];
+}
+
+.content-area header nav {
+    @apply w-full bg-white px-4 flex justify-between py-2;
+}
+
+.notice {
+    @apply w-full bg-teal-400 px-5  py-1 text-center text-wrap;
+}
+
+.content-area .page{
+    height: -webkit-fill-available;
+    @apply m-4 p-5 bg-white overflow-hidden rounded-lg shadow-lg mt-24;
+}
+
+.content-area .page .title .breadcrum{
+    @apply flex gap-1 font-semibold text-slate-700;
+}
+
+.breadcrum li:nth-child(1){
+    @apply text-slate-900;
+}

@@ -4,12 +4,17 @@
   "description": "Design 1",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./public/styles.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./public/styles.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^4.0.4"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1"
   }
 }
